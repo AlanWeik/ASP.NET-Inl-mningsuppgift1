@@ -17,12 +17,6 @@ namespace ASP.NET_Inlämningsuppgift1.Data
         public DbSet<Models.Event> Events { get; set; }
         public DbSet<Models.Organizer> Organizers { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Attendee>().ToTable("Attendee");
-            modelBuilder.Entity<Event>().ToTable("Event");
-            modelBuilder.Entity<Organizer>().ToTable("Student");
-        }
     }
 }
 

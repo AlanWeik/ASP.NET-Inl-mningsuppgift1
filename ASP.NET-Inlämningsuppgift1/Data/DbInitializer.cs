@@ -12,21 +12,18 @@ namespace ASP.NET_Inlämningsuppgift1.Data
         {
             context.Database.EnsureCreated();
 
-            // Look for any students.
-            if (context.Events.Any())
-            {
-                return;   // DB has been seeded
-            }
+            context.RemoveRange(context.Attendees);
+            context.RemoveRange(context.Events);
+            context.RemoveRange(context.Organizers);
+
             var attendees = new Attendee[]
             {
                 new Attendee { Name="Albert Krimson", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
-                new Attendee { Name="Svante Pålsson", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
                 new Attendee { Name="Svante Pålsson", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
                 new Attendee { Name="Tom Nordbeck", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
                 new Attendee { Name="Lana Lane", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
                 new Attendee { Name="Alan Weik", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
                 new Attendee { Name="Civil Polis", Phone_Number=0793123456, Email="SomeEmail@gmail.com"},
-
             };
             context.Attendees.AddRange(attendees);
             context.SaveChanges();
