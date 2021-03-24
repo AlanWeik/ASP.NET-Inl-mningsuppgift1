@@ -25,7 +25,7 @@ namespace ASP.NET_Inlämningsuppgift1
                 {
                     var context = services.GetRequiredService<EventDbContext>();
                     context.Database.EnsureCreated();
-                    // DbInitializer.Initialize(context);
+                    //DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
