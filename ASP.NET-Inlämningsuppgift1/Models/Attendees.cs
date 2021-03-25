@@ -10,7 +10,7 @@ namespace ASP.NET_Inlämningsuppgift1.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Phone_Number { get; set; }
+        public int Phone_Number { get; set; }
         public virtual List<Event> Events { get; set; }
     }
 }
