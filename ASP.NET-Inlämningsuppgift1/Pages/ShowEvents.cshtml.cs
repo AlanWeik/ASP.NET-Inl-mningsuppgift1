@@ -10,20 +10,21 @@ using ASP.NET_Inlämningsuppgift1.Models;
 
 namespace ASP.NET_Inlämningsuppgift1.Pages
 {
-    public class MyEventsModel : PageModel
+    public class ShowEventsModel : PageModel
     {
         private readonly ASP.NET_Inlämningsuppgift1.Data.EventDbContext _context;
 
-        public MyEventsModel(ASP.NET_Inlämningsuppgift1.Data.EventDbContext context)
+        public ShowEventsModel(ASP.NET_Inlämningsuppgift1.Data.EventDbContext context)
         {
             _context = context;
         }
 
-        public IList<Event> Event { get;set; }
+        public IList<Event> Event { get; set; }
 
         public async Task OnGetAsync()
         {
             Event = await _context.Events.ToListAsync();
         }
+
     }
 }
