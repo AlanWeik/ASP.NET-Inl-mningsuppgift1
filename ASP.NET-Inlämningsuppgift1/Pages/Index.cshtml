@@ -1,10 +1,16 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Alans Covid-Free Events (bring you own mask)";
+    ViewData["Title"] = "Alans Covid-Free Events";
 }
 
+<container class="cont">
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">Alan Weik 2021</a>.</p>
+    <h1 class="display-4">Welcome to Alans Covid-Free Events <br />(bring you own mask)</h1><br />
+
+    <a asp-page="./ShowEvents">Register</a>
+    <a asp-page="./ShowEvents">Log In</a>
+
 </div>
+</container>

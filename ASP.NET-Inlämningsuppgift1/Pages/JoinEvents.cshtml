@@ -9,7 +9,7 @@
 
 <h4>Event</h4>
 <hr />
-<div class="row">
+<div>
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -38,6 +38,14 @@
                 <input type="submit" value="Join" class="btn btn-primary" />
             </div>
         </form>
+        <div class="buttons">
+            <button onclick="window.location.href='./MyEvents';">
+                My Events
+            </button>
+            <button onclick="window.location.href='./ShowEvents';">
+                More Events
+            </button>
+        </div>
     </div>
 </div>
 

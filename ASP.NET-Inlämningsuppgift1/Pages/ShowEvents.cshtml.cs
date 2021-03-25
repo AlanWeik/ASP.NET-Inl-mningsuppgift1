@@ -25,5 +25,6 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
         {
             Event = await _context.Events.Include(@event => @event.Organizer).ToListAsync();
         }
+
     }
 }
