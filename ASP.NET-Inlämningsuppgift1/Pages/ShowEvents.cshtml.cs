@@ -25,6 +25,5 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
         {
             Event = await _context.Events.ToListAsync();
         }
-
     }
 }
