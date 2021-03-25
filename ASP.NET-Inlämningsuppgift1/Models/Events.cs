@@ -11,6 +11,7 @@ namespace ASP.NET_Inlämningsuppgift1.Models
         public string Description { get; set; }
         public string Place { get; set; }
         public int Date { get; set; }
+        public Organizer Organizer { get; set; }
         public int Spots_Available { get; set; }
         public List<Attendee> Attendees { get; set; }
     }

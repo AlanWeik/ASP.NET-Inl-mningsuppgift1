@@ -14,8 +14,8 @@ namespace ASP.NET_Inlämningsuppgift1.Data
         {
         }
         public DbSet<Models.Attendee> Attendees { get; set; }
-        public DbSet<Models.Event> Events { get; set; }
         public DbSet<Models.Organizer> Organizers { get; set; }
+        public DbSet<Models.Event> Events { get; set; }
 
     }
 }

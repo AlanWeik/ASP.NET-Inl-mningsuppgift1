@@ -40,10 +40,10 @@ namespace ASP.NET_Inlämningsuppgift1.Data
 
             var organizers = new Organizer[]
             {
-                new Organizer{ Name="Real Records", Phone_Number=043123156, Email="OurEmail@gmail.com" },
-                new Organizer{ Name="Thai Events", Phone_Number=043122456, Email="OurEmail@gmail.com" },
-                new Organizer{ Name="Groovy Records", Phone_Number=043123456, Email="OurEmail@gmail.com" },
-                new Organizer{ Name="Tickermaster", Phone_Number=043123454, Email="OurEmail@gmail.com" },
+                new Organizer { Name="Real Records", Phone_Number=043123156, Email="OurEmail@gmail.com" },
+                new Organizer { Name="Thai Events", Phone_Number=043122456, Email="OurEmail@gmail.com" },
+                new Organizer { Name="Groovy Records", Phone_Number=043123456, Email="OurEmail@gmail.com" },
+                new Organizer { Name="Tickermaster", Phone_Number=043123454, Email="OurEmail@gmail.com" },
             };
             context.Organizers.AddRange(organizers);
             context.SaveChanges();

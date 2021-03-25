@@ -25,6 +25,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Event[0].Spots_Available)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Event[0].Organizer)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -44,7 +47,10 @@
                 @Html.DisplayFor(modelItem => item.Spots_Available)
             </td>
             <td>
-                
+                @Html.DisplayFor(modelItem => item.Organizer.Name)
+            </td>
+            <td>
+
                 <a asp-page="./JoinEvents" asp-route-id="@item.Id">Join</a>
 
             </td>

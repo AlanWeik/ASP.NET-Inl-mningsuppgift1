@@ -23,7 +23,7 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
 
         public async Task OnGetAsync()
         {
-            Event = await _context.Events.ToListAsync();
+            Event = await _context.Events.Include(@event => @event.Organizer).ToListAsync();
         }
     }
 }
