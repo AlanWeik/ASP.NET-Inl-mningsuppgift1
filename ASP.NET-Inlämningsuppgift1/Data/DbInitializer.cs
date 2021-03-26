@@ -10,11 +10,19 @@ namespace ASP.NET_Inlämningsuppgift1.Data
     {
         public static void Initialize(EventDbContext context)
         {
-            context.Database.EnsureCreated();
 
+            context.Database.EnsureCreated();
+            if (context.Events.Any() ||
+                context.Attendees.Any() ||
+                context.Organizers.Any())
+            {
+                return;
+            }
+
+            /*context.Database.EnsureCreated();
             context.RemoveRange(context.Attendees);
             context.RemoveRange(context.Events);
-            context.RemoveRange(context.Organizers);
+            context.RemoveRange(context.Organizers);*/
 
             var attendees = new Attendee[]
             {
