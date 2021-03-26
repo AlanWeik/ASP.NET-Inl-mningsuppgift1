@@ -18,12 +18,12 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
         {
             _context = context;
         }
-
-        public IList<Event> Event { get;set; }
-
+        public Attendee Attendee { get; set; }
         public async Task OnGetAsync()
         {
-            Event = await _context.Events.ToListAsync();
+            Attendee = await _context.Attendees.Where(a => a.Id == 1)
+                .Include(e => e.Events)
+                .FirstOrDefaultAsync();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
 
         [BindProperty]
         public Event Event { get; set; }
+        public string Message { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -39,10 +40,10 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Message = "Cool! See you there!";
+
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -66,7 +67,8 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
                 }
             }
 
-            return RedirectToPage("./Index");
+            return Page();
+            //return RedirectToPage("./Index");
         }
 
         private bool EventExists(int id)
