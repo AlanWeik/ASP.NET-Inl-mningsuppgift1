@@ -40,7 +40,7 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             Message = "Cool! See you there!";
 
@@ -49,31 +49,22 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
                 return Page();
             }
 
-            _context.Attach(Event).State = EntityState.Modified;
-
-            try
+            if (id == null)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EventExists(Event.Id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound();
             }
 
+            var attendee = await _context.Attendees.Where(a => a.Id == 1)
+                .Include(e => e.Events)
+                .FirstOrDefaultAsync();
+            var join = await _context.Events.Where(e => e.Id == id).FirstOrDefaultAsync();
+
+            attendee.Events.Add(join);
+
+            await _context.SaveChangesAsync();
             return Page();
-            //return RedirectToPage("./Index");
-        }
 
-        private bool EventExists(int id)
-        {
-            return _context.Events.Any(e => e.Id == id);
+            //return RedirectToPage("./MyEvents");
         }
     }
 }

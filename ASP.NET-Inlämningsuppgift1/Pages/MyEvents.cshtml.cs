@@ -18,7 +18,9 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
         {
             _context = context;
         }
+
         public Attendee Attendee { get; set; }
+
         public async Task OnGetAsync()
         {
             Attendee = await _context.Attendees.Where(a => a.Id == 1)
