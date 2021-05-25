@@ -5,8 +5,6 @@ using System;
 using ASP.NET_Inlämningsuppgift1.Data;
 using Microsoft.Extensions.DependencyInjection;
 
-
-
 namespace ASP.NET_Inlämningsuppgift1
 {
     public class Program
@@ -18,7 +16,6 @@ namespace ASP.NET_Inlämningsuppgift1
             CreateDbIfNotExists(host);
 
             host.Run();
-
         }
 
         private static void CreateDbIfNotExists(IHost host)
