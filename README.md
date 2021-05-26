@@ -32,3 +32,26 @@ RAZOR-PAGES:
 Razor Pages Appar är nyare och simplare web-applikations programmeringsmodell som har en fil-baserad routing approach till skillnad ifrån ASP.NET MVC.
 Varje Razor-Page består av en HTML-sida (Index.html.cs) där du bygger upp sidan som användaren ser och interagerar med och en "PageModel" (Index.cshtml.cs) sida där du kodar funktionalitet och styr din Razor-HTML-sida (med C#).
 Här jobbar vi med GET och POST för att hämta/skicka data och reagera på användaren.  
+
+
+MVC:
+MVC står för "Model-View-Controller" och är ett designmönster för appar som har ett grafisk användargränssnitt. Genom att använda MVC kan man separara användargränssnittet från affärslogiken. De tre typer man arbetar med i MVC är model, view och controllerobjekt. Dessa tre typer är separerade från varandra och kan arbeta självständigt samtidigt som de kommunicerar med varann. Man kan dra nytta av MVC-designmönstret på många sätt då objekten blir återanvändbara och gränssnittet blir bättre definierat. MVC bidrar till man minskar komplexiteten eftersom det blir enklare att programmera, felsöka och testa saker i programmet. 
+
+Model: 
+Här definierar man regler, data och instruktioner som applikationen ska följa. 
+Modellen tar emot förfrågningar om information från view och svarar på instruktioner som kommer ifrån controllern. All data som ligger lagrad i en databas till exempel bör ligga i model när data har laddats in i applikationen. 
+
+View: 
+Detta är vad som visas för användaren. View ska ge en korrekt representation av model och kan även låta användaren redigera datan från model. 
+
+Controller: 
+Controllern är delen som tar emot instruktioner ifrån användaren och gör om instruktionerna till något som appen kan hantera. Controllern känner av input ifrån användaren så som musklick och kommandon från tangentbordet samt informerar model eller view om vad som ska utföras eller visas. Conntrollern fungerar som en mellanhand mellan view och model. 
+
+Nackdelar med MVC: 
+Tidskrävande, det tar tid att göra även mindre uppgifter då det krävs omfattande planering för att dela upp koden och dess separation. 
+
+Tar mycket plats, ska man ha ett minimalistiskt tänk och inte för mycket clutter i sitt projekt så rekommenderas inte MVC. MVC kräcker mycket plats på servern och är oftast tänkt att använda för större appar. 
+
+Komplicerat, som tidigare nämnt så är MVC inte så smidigt att använda för mindre appar då MVC ökar komplexiteten saker. 
+
+
