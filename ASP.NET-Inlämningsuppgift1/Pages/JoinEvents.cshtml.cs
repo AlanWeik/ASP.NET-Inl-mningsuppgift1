@@ -60,7 +60,6 @@ namespace ASP.NET_Inlämningsuppgift1.Pages
             var join = await _context.Events.Where(e => e.Id == id).FirstOrDefaultAsync();
 
             attendee.Events.Add(join);
-
             await _context.SaveChangesAsync();
             return Page();
 

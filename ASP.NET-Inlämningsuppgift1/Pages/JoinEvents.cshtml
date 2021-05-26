@@ -5,11 +5,9 @@
     ViewData["Title"] = "Join Events";
 }
 
-<h1>JoinEvent</h1>
+<h1>Join Events</h1>
 
 <div>
-    <h4>Event</h4>
-    <hr />
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Event.Description)
@@ -37,11 +35,14 @@
         </dd>
     </dl>
 </div>
+
 <div>
-    <form method="post">
-        <input type="submit" value="Join" class="btn btn-primary" />
-        <h3>@Model.Message</h3>
-    </form>
+    <div>
+        <form method="post">
+            <input type="submit" value="Join" class="btn btn-primary" />
+            <h3>@Model.Message</h3>
+        </form>
+    </div>
 
     <div class="buttons">
         <button onclick="window.location.href='./MyEvents';">
@@ -52,7 +53,6 @@
         </button>
     </div>
 </div>
-
 
 
 @section Scripts {
